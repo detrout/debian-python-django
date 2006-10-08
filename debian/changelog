@@ -1,0 +1,5 @@
+python-django (0.95-1) unstable; urgency=low
+
+  * 0.95 release - initial packaging
+
+ -- Brett Parker <iDunno@sommitrealweird.co.uk>  Sun, 13 Aug 2006 11:32:00 +0100
