@@ -9,9 +9,8 @@ Build-Depends: debhelper (>= 5.0.37.2), python-dev, cdbs (>= 0.4.42), python-set
 Package: python-django
 Architecture: all
 Depends: ${python:Depends}
-Recommends: python-psycopg, python-sqlite, python-mysqldb
+Recommends: python-psycopg, python-pysqlite2, python-mysqldb
 Priority: optional
-Conflicts: python-django
 Description: A high-level Python Web framework
  Django is a high-level Python Web framework that encourages rapid development
  and clean, pragmatic design.
