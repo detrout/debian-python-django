@@ -23,4 +23,3 @@ me).replace('{{ %s_name }}' % other, other_name))
 +                os.chmod(path_new, 0755)
 +            else:
 +                shutil.copymode(path_old, path_new)
-
