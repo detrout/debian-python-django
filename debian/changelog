@@ -1,8 +1,13 @@
 python-django (0.95-2) UNRELEASED; urgency=low
 
+  [ Piotr Ozarowski ]
   * Added XS-Vcs-Svn field
 
- -- Piotr Ozarowski <ozarow@gmail.com>  Thu, 23 Nov 2006 14:44:52 +0100
+  [ Brett Parker ]
+  * Made manage.py get a shebang with the version of python
+    used when running django-admin
+
+ -- Brett Parker <iDunno@sommitrealweird.co.uk>  Tue,  5 Dec 2006 16:39:26 +0000
 
 python-django (0.95-1) unstable; urgency=low
 
