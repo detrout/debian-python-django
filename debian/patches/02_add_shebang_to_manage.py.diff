@@ -23,3 +23,8 @@ me).replace('{{ %s_name }}' % other, other_name))
 +                os.chmod(path_new, 0755)
 +            else:
 +                shutil.copymode(path_old, path_new)
+ 
+ def startproject(project_name, directory):
+     "Creates a Django project for the given project_name in the given directory."
+     from random import choice
+
