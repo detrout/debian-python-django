@@ -1,4 +1,4 @@
-python-django (0.95-2) UNRELEASED; urgency=low
+python-django (0.95-2) unstable; urgency=low
 
   [ Piotr Ozarowski ]
   * Added XS-Vcs-Svn field
