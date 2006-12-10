@@ -5,7 +5,11 @@ python-django (0.95-2) UNRELEASED; urgency=low
 
   [ Brett Parker ]
   * Made manage.py get a shebang with the version of python
-    used when running django-admin
+    used when running django-admin (closes: #401616)
+  * Moved bin to /usr/lib/python-django/bin and added a symlink
+    from python-support/python-django/django/bin to it
+  * Changed shebangs on the bin scripts to use the default version
+    of python (i.e. /usr/bin/python)
 
  -- Brett Parker <iDunno@sommitrealweird.co.uk>  Tue,  5 Dec 2006 16:39:26 +0000
 

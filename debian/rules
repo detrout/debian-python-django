@@ -11,6 +11,14 @@ DEB_PYTHON_INSTALL_ARGS_ALL += --single-version-externally-managed
 
 binary-post-install/python-django::
 	# Remove python shebang on some files
-	perl -pi -e 's|^#!/usr/bin/env python.*$$||' debian/python-django/usr/share/python-support/python-django/django/bin/*.py debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
+	perl -pi -e 's|^#!/usr/bin/env python.*$$||' debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
+	# Move the bin directory to /usr/lib/python-django/bin, and change the
+	# scripts to use /usr/bin/python
+	mkdir -p debian/python-django/usr/lib/python-django
+	mv debian/python-django/usr/share/python-support/python-django/django/bin debian/python-django/usr/lib/python-django
+	perl -pi -e 's|^#!/usr/bin/env python(.*)$$|#!/usr/bin/python$1|' debian/python-django/usr/lib/python-django/bin/*.py
+	chmod 755 debian/python-django/usr/lib/python-django/bin/{profiling/,}*.py
+	chmod 644 debian/python-django/usr/lib/python-django/bin/{profiling/,}__init__.py
+	dh_link usr/lib/python-django/bin usr/share/python-support/python-django/django/bin
 	# Rename djando-admin.py to djando-admin
 	mv debian/python-django/usr/bin/django-admin.py debian/python-django/usr/bin/django-admin
