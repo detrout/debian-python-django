@@ -10,15 +10,15 @@ include /usr/share/cdbs/1/rules/simple-patchsys.mk
 DEB_PYTHON_INSTALL_ARGS_ALL += --single-version-externally-managed
 
 binary-post-install/python-django::
-	# Remove python shebang on some files
-	perl -pi -e 's|^#!/usr/bin/env python.*$$||' debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
-	# Move the bin directory to /usr/lib/python-django/bin, and change the
-	# scripts to use /usr/bin/python
+	# Use default python shebang
+	perl -pi -e 's|^#!/usr/bin/env python.*$$|#!/usr/bin/python|' debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
+	# Ensure executability of some scripts that are copied to projects
+	# (or used within projects)
+	chmod 755 debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
+	chmod 755 debian/python-django/usr/share/python-support/python-django/django/bin/[^_]*.py
+	chmod 755 debian/python-django/usr/share/python-support/python-django/django/bin/profiling/[^_]*.py
+	# Create convenience symlink
 	mkdir -p debian/python-django/usr/lib/python-django
-	mv debian/python-django/usr/share/python-support/python-django/django/bin debian/python-django/usr/lib/python-django
-	perl -pi -e 's|^#!/usr/bin/env python(.*)$$|#!/usr/bin/python$1|' debian/python-django/usr/lib/python-django/bin/*.py
-	chmod 755 debian/python-django/usr/lib/python-django/bin/{profiling/,}*.py
-	chmod 644 debian/python-django/usr/lib/python-django/bin/{profiling/,}__init__.py
-	dh_link usr/lib/python-django/bin usr/share/python-support/python-django/django/bin
+	dh_link usr/share/python-support/python-django/django/bin usr/lib/python-django/bin 
 	# Rename djando-admin.py to djando-admin
 	mv debian/python-django/usr/bin/django-admin.py debian/python-django/usr/bin/django-admin

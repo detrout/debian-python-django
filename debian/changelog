@@ -6,12 +6,12 @@ python-django (0.95-2) unstable; urgency=low
   [ Brett Parker ]
   * Made manage.py get a shebang with the version of python
     used when running django-admin (closes: #401616)
-  * Moved bin to /usr/lib/python-django/bin and added a symlink
-    from python-support/python-django/django/bin to it
-  * Changed shebangs on the bin scripts to use the default version
-    of python (i.e. /usr/bin/python)
+  * Created a convenience /usr/lib/python-django/bin symlink.
 
- -- Brett Parker <iDunno@sommitrealweird.co.uk>  Tue,  5 Dec 2006 16:39:26 +0000
+  [ Raphael Hertzog ]
+  * Adapted Brett's work to better fit my views of the packaging.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat, 16 Dec 2006 11:03:20 +0100
 
 python-django (0.95-1) unstable; urgency=low
 
