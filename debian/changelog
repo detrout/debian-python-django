@@ -1,5 +1,6 @@
 python-django (0.95.1-1) unstable; urgency=low
 
+  [ Brett Parker ]
   * New upstream minor release for security bugs:
     - http://www.djangoproject.com/weblog/2007/jan/21/0951/
       - Fixes a small security vulnerability in the script Django's
@@ -14,7 +15,12 @@ python-django (0.95.1-1) unstable; urgency=low
   * Sets Recommends to python-psycopg and moves other database engines to
     the Suggests field.
 
- -- Brett Parker <iDunno@sommitrealweird.co.uk>  Sun, 21 Jan 2007 12:57:21 +0000
+  [ Raphael Hertzog ]
+  * Use python-pysqlite2 as default database engine in Recommends. Others are
+    in Suggests. Closes: #403761
+  * Add python-psycopg2 in Suggests. Closes: #407489
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sun, 21 Jan 2007 17:45:50 +0100
 
 python-django (0.95-3) unstable; urgency=low
 
