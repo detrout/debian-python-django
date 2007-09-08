@@ -1,3 +1,16 @@
+python-django (0.96+svn6034-1) experimental; urgency=low
+
+  [ Brett Parker]
+  * New SVN snapshot (rev 6034).
+     * validate and runserver commands now display the number of errors
+       (returning back to previous functionality).
+     * Small documentation fixes
+     * assertRedirects handling for paths with get data
+     * start{project,app} no make sure files created are writable
+  * Add man page for django-admin to the debian package
+
+ -- Brett Parker <iDunno@sommitrealweird.co.uk>  Sat,  8 Sep 2007 10:37:00 +0100
+
 python-django (0.96+svn6020-1) experimental; urgency=low
 
   * New SVN snapshot (rev 6020).
