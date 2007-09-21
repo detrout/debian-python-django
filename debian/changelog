@@ -1,3 +1,9 @@
+python-django (0.96+svn6034-2) UNRELEASED; urgency=low
+
+  * XS-Vcs-Browser and Homepage fields added
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 21 Sep 2007 22:09:37 +0200
+
 python-django (0.96+svn6034-1) experimental; urgency=low
 
   [ Brett Parker]
