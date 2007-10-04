@@ -1,8 +1,22 @@
-python-django (0.96+svn6034-2) UNRELEASED; urgency=low
+python-django (0.96+svn6373-2) experimental; urgency=low
 
+  [ Raphael Hertzog ]
+  * The upload 0.96+svn6373-1 didn't incorporate the latest changes from
+  the 0.96+svn6034-1. I worked on non-updated svn repository and forgot
+  to commit and thus didn't notice the previous work. This upload fixes
+  that mistake.
+  * Rename XS-Vcs* fields to Vcs-* since they are now supported by dpkg.
+
+  [ Piotr Ożarowski ]
   * XS-Vcs-Browser and Homepage fields added
 
- -- Piotr Ożarowski <piotr@debian.org>  Fri, 21 Sep 2007 22:09:37 +0200
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 04 Oct 2007 14:59:01 +0200
+
+python-django (0.96+svn6373-1) experimental; urgency=low
+
+  * New SVN snapshot (rev 6373, a few days after the last Django sprint).
+
+ -- Raphael Hertzog <hertzog@debian.org>  Tue, 18 Sep 2007 15:48:07 +0200
 
 python-django (0.96+svn6034-1) experimental; urgency=low
 
