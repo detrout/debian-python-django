@@ -1,3 +1,15 @@
+python-django (0.97~svn6668-1) experimental; urgency=low
+
+  * New SVN snapshot (rev 6668)
+    - Auth system delegations
+    - Apps can now have thier own management commands
+    - Fix for CVE-2007-5712 remote denial of service
+      Closes: #448838
+  * Fix missing upstream info in changelog
+    Closes: #450659
+
+ -- Brett Parker <iDunno@sommitrealweird.co.uk>  Sun, 11 Nov 2007 10:15:55 +0000
+
 python-django (0.96+svn6373-1) experimental; urgency=low
 
   [ Raphael Hertzog ]
