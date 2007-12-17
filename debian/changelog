@@ -1,3 +1,10 @@
+python-django (0.97~svn6668-2) UNRELEASED; urgency=low
+
+  * Install examples with dh_installexamples instead of dh_installdocs
+    (change done by Ubuntu) as empty files are kept.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 17 Dec 2007 09:09:16 +0100
+
 python-django (0.97~svn6668-1) experimental; urgency=low
 
   * New SVN snapshot (rev 6668)
