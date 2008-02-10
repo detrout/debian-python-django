@@ -1,6 +1,7 @@
 python-django (0.97~svn7047-2) experimental; urgency=low
 
   * Patch for postgresql version issue with 8.3 beta/rc releases
+    Closes: #462058
  
  -- Brett Parker <iDunno@sommitrealweird.co.uk>  Wed,  6 Feb 2008 15:15:37 +0000
 
