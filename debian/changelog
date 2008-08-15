@@ -1,7 +1,7 @@
 python-django (1.0~beta1-1) UNRELEASED; urgency=low
 
   [ David Spreen ]
-  * New upstream alpha release.
+  * New upstream beta release. Closes: #492956
   * debian/watch: Added mangling for filename and version. Old watch file would 
     name the download 'tarball'. Also added mangling to handle alpha and beta 
     versioning.
