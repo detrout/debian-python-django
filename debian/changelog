@@ -1,4 +1,4 @@
-python-django (1.0~beta1-1) UNRELEASED; urgency=low
+python-django (1.0~beta1-1) experimental; urgency=low
 
   [ David Spreen ]
   * New upstream beta release. Closes: #492956
@@ -13,9 +13,9 @@ python-django (1.0~beta1-1) UNRELEASED; urgency=low
   * debian/patches/03_manpage.diff: Adapted patch to new upstream version.
   
   [ Jan Dittberner ]
-  * add debian/watch file
+  * add debian/watch file.
   
- -- David Spreen <netzwurm@debian.org>  Fri, 15 Aug 2008 15:49:04 -0700
+ -- David Spreen <netzwurm@debian.org>  Fri, 15 Aug 2008 16:05:07 -0700
 
 python-django (0.97~svn7534-1) experimental; urgency=low
 
