@@ -1,4 +1,4 @@
-python-django (1.0~alpha2-1) UNRELEASED; urgency=low
+python-django (1.0~beta1-1) UNRELEASED; urgency=low
 
   [ David Spreen ]
   * New upstream alpha release.
