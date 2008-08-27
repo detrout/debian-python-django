@@ -2,8 +2,9 @@ python-django (1.0~beta2-1) UNRELEASED; urgency=low
 
   [ David Spreen ]
   * New upstream beta release. 
-
- -- David Spreen <netzwurm@debian.org>  Wed, 27 Aug 2008 09:18:09 -0700
+  * debian/control: Updated standards version.
+  
+ -- David Spreen <netzwurm@debian.org>  Wed, 27 Aug 2008 09:46:12 -0700
 
 python-django (1.0~beta1-1) experimental; urgency=low
 
