@@ -26,11 +26,6 @@ binary-post-install/python-django::
 build/python-django-doc::
 	# Build HTML documentation.
 	cd docs && make html
-	cd docs && make latex
-	cd docs/_build/latex && make all-pdf
-	# Something in that code forces pdf output so we have to 
-	# get our postscript from pdf:
-	cd docs/_build/latex && pdf2ps django.pdf
 
 clean::
 	rm -rf docs/_build/*

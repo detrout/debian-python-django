@@ -1,7 +1,1 @@
 docs/_build/html/* usr/share/doc/python-django-doc/html/
-docs/_build/latex/django.pdf usr/share/doc/python-django-doc/
-docs/_build/latex/django.ps usr/share/doc/python-django-doc/
-docs/_build/latex/*.tex usr/share/doc/python-django-doc/latex/
-docs/_build/latex/*.sty usr/share/doc/python-django-doc/latex/
-docs/_build/latex/*.cls usr/share/doc/python-django-doc/latex/
-docs/_build/latex/*.ist usr/share/doc/python-django-doc/latex/
