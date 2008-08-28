@@ -5,8 +5,8 @@ python-django (1.0~beta2-1) UNRELEASED; urgency=low
   * New upstream beta release. 
   * debian/control 
     - Updated standards version.
-    - Added python-sphinx, libjs-jquery and texlive-latex-base to 
-      Build-Depends-Indep.
+    - Added python-sphinx, libjs-jquery, texlive-latex-base and 
+      texlive-latex-extra to Build-Depends-Indep.
     - Added python-django-doc package depending on libjs-jquery.
   * debian/docs
     - Moved to debian/python-django.docs.
