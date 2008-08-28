@@ -1,10 +1,33 @@
 python-django (1.0~beta2-1) experimental; urgency=low
 
   [ David Spreen ]
+  * The `hooray for the documentation' release!
   * New upstream beta release. 
-  * debian/control: Updated standards version.
+  * debian/control 
+    - Updated standards version.
+    - Added python-sphinx and libjs-jquery to Build-Depends-Indep.
+    - Added python-django-doc package depending on libjs-jquery.
+  * debian/docs
+    - Moved to debian/python-django.docs.
+  * debian/install
+    - Moved to debian/python-django.install.
+  * debian/manpages
+    - Moved to debian/python-django.manpages.
+  * debian/README.Debian
+    - Moved to debian/python-django.README.Debian
+  * debian/python-django-doc.doc-base:
+    - Added doc-base file for the documentation.
+  * debian/python-django-doc.examples:
+    - Installing examples to python-django-doc now instead
+      of python-django.
+  * debian/python-django-doc.install:
+    - Added install file for sphinx generated documentation.
+  * debian/rules:
+    - Added code to generate documentation with sphinx and 
+      replace convenience file of jquery.js with the respective
+      symlink to libjs-jquery.
   
- -- David Spreen <netzwurm@debian.org>  Wed, 27 Aug 2008 09:46:12 -0700
+ -- David Spreen <netzwurm@debian.org>  Thu, 28 Aug 2008 10:22:29 -0700
 
 python-django (1.0~beta1-1) experimental; urgency=low
 
