@@ -1,0 +1,3 @@
+debian/tmp/usr/bin/django-admin.py
+debian/tmp/usr/lib/python*/site-packages
+extras/django_bash_completion etc/bash_completion.d/
