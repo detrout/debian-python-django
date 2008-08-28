@@ -24,6 +24,3 @@ Files: /usr/share/doc/python-django-doc/django.pdf
 
 Format: PostScript
 Files: /usr/share/doc/python-django-doc/django.ps.gz
-
-Format: DVI
-Files: /usr/share/doc/python-django-doc/django.dvi.gz
