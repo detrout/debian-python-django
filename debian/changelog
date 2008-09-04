@@ -14,6 +14,7 @@ python-django (1.0-1) unstable; urgency=low
   * Remove execute right on /etc/bash_completion.d/django_bash_completion
   * Add debian/patches/04_hyphen-manpage.diff to fix a lintian message
     (hyphen-used-as-minus-sign usr/share/man/man1/django-admin.1.gz:156).
+  * Don't compress javascript files.
 
  -- Raphael Hertzog <hertzog@debian.org>  Thu, 04 Sep 2008 08:33:32 +0200
 
