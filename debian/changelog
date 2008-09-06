@@ -1,3 +1,11 @@
+python-django (1.0-2) UNRELEASED; urgency=low
+
+  [ David Spreen ]
+  * Remove python-pysqlite2 from Recommends because Python 2.5 includes
+    sqlite library used by Django. Closes: 497886
+
+ -- David Spreen <netzwurm@debian.org>  Sat, 06 Sep 2008 16:09:03 -0700
+
 python-django (1.0-1) unstable; urgency=low
 
   [ David Spreen ]
