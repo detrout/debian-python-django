@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 5.0.37.2), python-dev, cdbs (>= 0.4.42), python-set
 Build-Depends-Indep: python-sphinx, libjs-jquery
 Homepage: http://www.djangoproject.com/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-django/trunk/
-Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-django/trunk/?op=log
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-django/trunk/
 
 Package: python-django
 Architecture: all
