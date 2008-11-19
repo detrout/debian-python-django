@@ -1,4 +1,4 @@
-python-django (1.0.2-1) UNRELEASED; urgency=low
+python-django (1.0.2-1) unstable; urgency=low
 
   [ Chris Lamb ]
   * New upstream bugfix release. Closes: #505783
@@ -12,7 +12,7 @@ python-django (1.0.2-1) UNRELEASED; urgency=low
   * debian/control
     - switch Vcs-Browser field to viewsvn
 
- -- David Spreen <netzwurm@debian.org>  Sat, 06 Sep 2008 16:09:03 -0700
+ -- Chris Lamb <lamby@debian.org>  Wed, 19 Nov 2008 21:31:00 +0000
 
 python-django (1.0-1) unstable; urgency=low
 
