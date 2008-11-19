@@ -2,6 +2,7 @@ python-django (1.0.2-1) UNRELEASED; urgency=low
 
   [ Chris Lamb ]
   * New upstream bugfix release. Closes: #505783
+  * Add myself to Uploaders with ACK from Brett.
 
   [ David Spreen ]
   * Remove python-pysqlite2 from Recommends because Python 2.5 includes
