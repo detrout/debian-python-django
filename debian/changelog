@@ -5,6 +5,8 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
     down bugs, feel free to download it and give it a test."
   * Just Build-Depend on `python', not `python-dev'.
   * Move to debhelper 7.
+  * Drop versions on Build-Depends where they are satisfied in current
+    oldstable (ie. etch).
 
  -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 00:50:50 +0000
 
