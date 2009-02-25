@@ -1,4 +1,4 @@
-python-django (1.1~alpha1-1) UNRELEASED; urgency=low
+python-django (1.1~alpha1-1) experimental; urgency=low
 
   * New upstream "alpha preview package": "this package is not for production
     use, but if you'd like to try out some of the new features or help track
@@ -12,7 +12,7 @@ python-django (1.1~alpha1-1) UNRELEASED; urgency=low
   * Add ${misc:Depends} in binary stanza for debhelper-using package.
   * Remove bashisms from binary-post-install.
 
- -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 01:20:19 +0000
+ -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 01:28:47 +0000
 
 python-django (1.0.2-1) unstable; urgency=low
 
