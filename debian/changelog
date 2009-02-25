@@ -3,6 +3,7 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
   * New upstream "alpha preview package": "this package is not for production
     use, but if you'd like to try out some of the new features or help track
     down bugs, feel free to download it and give it a test."
+  * Just Build-Depend on `python', not `python-dev'.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 00:50:50 +0000
 
