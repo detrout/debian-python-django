@@ -12,7 +12,7 @@ Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-django
 
 Package: python-django
 Architecture: all
-Depends: ${python:Depends}
+Depends: ${misc:Depends}, ${python:Depends}
 Recommends: libjs-jquery
 Suggests: python-psycopg2, python-psycopg, python-mysqldb, python-flup
 Description: High-level Python web development framework
