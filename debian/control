@@ -15,19 +15,24 @@ Architecture: all
 Depends: ${python:Depends}
 Recommends: libjs-jquery
 Suggests: python-psycopg2, python-psycopg, python-mysqldb, python-flup
-Description: A high-level Python Web framework
- Django is a high-level Python Web framework that encourages rapid development
- and clean, pragmatic design.
+Description: High-level Python web development framework
+ Django is a high-level web application framework that loosely follows the
+ model-view-controller design pattern.
  .
- Python's equivalent to the famous Ruby on rails, Django lets you build
- high-performing, elegant Web applications quickly. Django focuses on
- automating as much as possible and adhering to the "Don't Repeat
- Yourself" (DRY) principle.
+ Python's equivalent to Ruby on Rails, Django lets you build complex
+ data-driven websites quickly and easily - Django focuses on automating as much
+ as possible and adhering to the "Don't Repeat Yourself" (DRY) principle.
  .
- It notably features:
-  * an object-relational mapper
-  * an automatic admin interface
-  * an elegant URL design
-  * a template system
-  * a cache system
-  * internationalization support
+ Django additionally emphasizes reusability and "pluggability" of components;
+ many generic third-party "applications" are available to enhance projects or
+ to simply to reduce development time even further.
+ .
+ Notable features include:
+  * An object-relational mapper (ORM)
+  * Automatic admin interface
+  * Elegant URL dispatcher
+  * Form serialization and validation system
+  * Templating system
+  * Lightweight, standalone web server for development and testing
+  * Internationalization support
+  * Testing framework and client
