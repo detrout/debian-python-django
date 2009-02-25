@@ -10,6 +10,7 @@ python-django (1.1~alpha1-1) UNRELEASED; urgency=low
   * Remove repeated 'Priority' line in binary package stanza.
   * Update crufty long and short descriptions.
   * Add ${misc:Depends} in binary stanza for debhelper-using package.
+  * Remove bashisms from binary-post-install.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 01:20:19 +0000
 
