@@ -1,4 +1,4 @@
-python-django (1.0.2-2) UNRELEASED; urgency=low
+python-django (1.0.2-2) unstable; urgency=low
 
   * Don't rely on the internal layout of python-support. (Closes: #517052)
   * Move to debhelper-based packaging for operational clarity:
@@ -17,7 +17,7 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
     - Update crufty long and short descriptions.
     - Add ${misc:Depends} in binary stanza for debhelper-using package.
 
- -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 00:50:50 +0000
+ -- Chris Lamb <lamby@debian.org>  Sun, 08 Mar 2009 06:01:59 +0000
 
 python-django (1.0.2-1) unstable; urgency=low
 
