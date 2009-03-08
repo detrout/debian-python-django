@@ -1,19 +1,3 @@
-python-django (1.1~alpha1-1) experimental; urgency=low
-
-  * New upstream "alpha preview package": "this package is not for production
-    use, but if you'd like to try out some of the new features or help track
-    down bugs, feel free to download it and give it a test."
-  * Just Build-Depend on `python', not `python-dev'.
-  * Move to debhelper 7.
-  * Drop versions on Build-Depends where they are satisfied in current
-    oldstable (ie. etch).
-  * Remove repeated 'Priority' line in binary package stanza.
-  * Update crufty long and short descriptions.
-  * Add ${misc:Depends} in binary stanza for debhelper-using package.
-  * Remove bashisms from binary-post-install.
-
- -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 01:28:47 +0000
-
 python-django (1.0.2-1) unstable; urgency=low
 
   [ Chris Lamb ]

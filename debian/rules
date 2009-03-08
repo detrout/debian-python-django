@@ -20,8 +20,8 @@ binary-post-install/python-django::
 	# Ensure executability of some scripts that are copied to projects
 	# (or used within projects)
 	chmod 755 debian/python-django/usr/share/python-support/python-django/django/conf/project_template/manage.py
-	find debian/python-django/usr/share/python-support/python-django/django/bin/ \
-		-name '*.py' -not -name '__init__.py' -print0 | xargs -0r chmod 755
+	chmod 755 debian/python-django/usr/share/python-support/python-django/django/bin/[^_]*.py
+	chmod 755 debian/python-django/usr/share/python-support/python-django/django/bin/profiling/[^_]*.py
 	# Remove execute rights from stuff that shouldn't have them
 	chmod 644 debian/python-django/etc/bash_completion.d/django_bash_completion
 	# Create convenience symlink
