@@ -8,6 +8,7 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
   * Update crufty long and short descriptions.
   * Add ${misc:Depends} in binary stanza for debhelper-using package.
   * Remove bashisms from binary-post-install.
+  * Use quilt and adjust existing patches so that we can apply with -p1.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 00:50:50 +0000
 
