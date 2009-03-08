@@ -5,6 +5,7 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
   * Drop versions on Build-Depends where they are satisfied in current
     oldstable (ie. etch).
   * Remove repeated 'Priority' line in binary package stanza.
+  * Update crufty long and short descriptions.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 25 Feb 2009 00:50:50 +0000
 
