@@ -12,6 +12,7 @@ python-django (1.0.2-2) UNRELEASED; urgency=low
     - Drop versions on Build-Depends where they are satisfied in current
       oldstable (ie. etch).
   * debian/control:
+    - Add python-sqlite to Suggests.
     - Remove repeated 'Priority' line in binary package stanza.
     - Update crufty long and short descriptions.
     - Add ${misc:Depends} in binary stanza for debhelper-using package.
