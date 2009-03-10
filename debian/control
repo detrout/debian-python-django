@@ -13,7 +13,6 @@ Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-django
 Package: python-django
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
-Recommends: libjs-jquery
 Suggests: python-psycopg2, python-psycopg, python-mysqldb, python-flup, python-sqlite
 Description: High-level Python web development framework
  Django is a high-level web application framework that loosely follows the
@@ -41,6 +40,7 @@ Package: python-django-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
+Recommends: libjs-jquery
 Description: High-level Python web development framework (documentation)
  Django is a high-level web application framework that loosely follows the
  model-view-controller design pattern.
