@@ -1,3 +1,10 @@
+python-django (1.0.2-4) UNRELEASED; urgency=low
+
+  * Programatically replace most references to "django-admin.py" with
+    "django-admin" in the generated documentation. (Closes: #519937)
+
+ -- Chris Lamb <lamby@debian.org>  Tue, 24 Mar 2009 00:44:24 +0000
+
 python-django (1.0.2-3) unstable; urgency=low
 
   * Split documentation into a separate python-django-doc package due to size
