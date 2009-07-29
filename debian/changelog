@@ -3,6 +3,7 @@ python-django (1.1-1) UNRELEASED; urgency=low
   * New upstream release.
   * Ship FastCGI initscript and /etc/default file in python-django's examples
     directory (Closes: #538863)
+  * Drop "05_10539-sphinx06-compatibility.diff"; it has been applied upstream.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 29 Jul 2009 11:13:50 +0200
 
