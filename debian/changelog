@@ -6,6 +6,7 @@ python-django (1.1-1) UNRELEASED; urgency=low
       directory (Closes: #538863)
     - Drop "05_10539-sphinx06-compatibility.diff"; it has been applied
       upstream.
+    - Bump Standards-Version to 3.8.2.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 29 Jul 2009 11:13:50 +0200
 
