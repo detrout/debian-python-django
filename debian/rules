@@ -8,9 +8,9 @@ DJANGO_DIR = $(PREFIX)/$(call py_libdir_sh,`pyversions -d`)/django
 %:
 	dh --with quilt $@
 
-clean:
-	dh $@
+override_dh_auto_clean:
 	rm -rf docs.debian
+	dh_auto_clean
 
 override_dh_auto_build:
 	dh_auto_build
