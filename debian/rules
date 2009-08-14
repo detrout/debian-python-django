@@ -9,7 +9,7 @@ DJANGO_DIR = $(PREFIX)/$(call py_libdir_sh,`pyversions -d`)/django
 	dh --with quilt $@
 
 override_dh_auto_clean:
-	rm -rf docs.debian
+	rm -rf docs.debian testproject
 	dh_auto_clean
 
 override_dh_auto_build:
@@ -22,6 +22,11 @@ override_dh_auto_build:
 	find docs.debian -type f -print0 | xargs -0r perl -pi -e 's|(?<!/)(django-admin)\.py|$$1|'
 	make -C docs.debian html
 	rm -rf docs.debian/_build/html/_sources/
+
+override_dh_auto_test:
+	PYTHONPATH=. django/bin/django-admin.py startproject testproject
+	sed -i "s|DATABASE_ENGINE = ''|DATABASE_ENGINE = 'sqlite3'|" testproject/settings.py
+	PYTHONPATH=. tests/runtests.py --settings=testproject.settings --verbosity=2
 
 override_dh_install:
 	dh_install
