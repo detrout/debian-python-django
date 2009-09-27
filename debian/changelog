@@ -1,3 +1,11 @@
+python-django (1.1-5) UNRELEASED; urgency=low
+
+  * Set Maintainer: to myself with thanks to Brett Parker.
+  * Tidy "Uploaders:" field, removing developers who have not uploaded in
+    12 months. With thanks to their previous work.
+
+ -- Chris Lamb <lamby@debian.org>  Sun, 27 Sep 2009 20:11:51 +0100
+
 python-django (1.1-4) unstable; urgency=low
 
   * Sourceful upload to drop dependency on Python 2.4.
