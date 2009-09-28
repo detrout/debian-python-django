@@ -2,7 +2,7 @@ Source: python-django
 Section: python
 Priority: optional
 Maintainer: Chris Lamb <lamby@debian.org>
-Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>, Raphaël Hertzog <hertzog@debian.org>
 Standards-Version: 3.8.3
 Build-Depends: debhelper (>= 7.0.50), python-support, quilt (>= 0.46-7~), python (>= 2.5) | python-sqlite
 Build-Depends-Indep: python-sphinx, libjs-jquery

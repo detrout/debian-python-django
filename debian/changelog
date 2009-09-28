@@ -1,10 +1,14 @@
 python-django (1.1-5) UNRELEASED; urgency=low
 
+  [ Chris Lamb ]
   * Set Maintainer: to myself with thanks to Brett Parker.
   * Tidy "Uploaders:" field, removing developers who have not uploaded in
     12 months. With thanks to their previous work.
   * Bump versioned build dependency on quilt to help backporters.
     (Closes: #547955)
+
+  [ Raphaël Hertzog ]
+  * Add myself back to Uploaders.
 
  -- Chris Lamb <lamby@debian.org>  Sun, 27 Sep 2009 20:11:51 +0100
 
