@@ -4,6 +4,7 @@ python-django (1.1.1-4) UNRELEASED; urgency=low
     fixtures. (Closes: #570963)
   * Apply patch from <http://code.djangoproject.com/ticket/12720> to fix FTBFS
     under Python 2.6. (Closes: #571553)
+  * Bump Standards-Version to 3.8.4.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 24 Feb 2010 07:57:24 +0000
 
