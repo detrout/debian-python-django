@@ -2,6 +2,8 @@ python-django (1.1.1-4) UNRELEASED; urgency=low
 
   * Add python-yaml to Suggests; without it, Django silently fails to load YAML
     fixtures. (Closes: #570963)
+  * Apply patch from <http://code.djangoproject.com/ticket/12720> to fix FTBFS
+    under Python 2.6. (Closes: #571553)
 
  -- Chris Lamb <lamby@debian.org>  Wed, 24 Feb 2010 07:57:24 +0000
 
