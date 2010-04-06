@@ -1,9 +1,9 @@
-python-django (1.1.1-5) UNRELEASED; urgency=low
+python-django (1.1.1-5) unstable; urgency=low
 
   * Apply patch from upstream VCS to fix unquoted DROP CONSTRAINT identifiers
     when using "./manage.py sqlclear". (Closes: #569564)
 
- -- Chris Lamb <lamby@debian.org>  Tue, 06 Apr 2010 22:20:37 +0100
+ -- Chris Lamb <lamby@debian.org>  Tue, 06 Apr 2010 22:22:56 +0100
 
 python-django (1.1.1-4) unstable; urgency=low
 
