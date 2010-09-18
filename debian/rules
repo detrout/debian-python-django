@@ -5,8 +5,12 @@ include /usr/share/python/python.mk
 PREFIX = debian/python-django
 DJANGO_DIR = $(PREFIX)/$(call py_libdir_sh,`pyversions -d`)/django
 
+# FIXME: if the build is run while non-default python version are
+# available, the build process will install files in
+# /usr/lib/pyshared/pythonX.Y while we don't need them
+
 %:
-	dh --with quilt $@
+	dh $@
 
 override_dh_auto_clean:
 	rm -rf docs.debian tests/__init__.py
@@ -38,6 +42,9 @@ override_dh_install:
 	# Move scripts to /usr/lib/python-django
 	mkdir -p $(PREFIX)/usr/lib/python-django
 	mv $(DJANGO_DIR)/bin $(PREFIX)/usr/lib/python-django
+
+	# Move conf template to shared directory
+	#mv $(DJANGO_DIR)/conf $(PREFIX)/usr/lib/python-django
 	
 	# Fix permissions
 	chmod 644 $(PREFIX)/etc/bash_completion.d/django_bash_completion
