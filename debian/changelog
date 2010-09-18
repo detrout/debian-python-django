@@ -1,4 +1,4 @@
-python-django (1.2.3-1) UNRELEASED; urgency=low
+python-django (1.2.3-1) unstable; urgency=low
 
   [ Krzysztof Klimonda ]
   * New upstream release. Closes: #596893 LP: #636482
@@ -19,7 +19,7 @@ python-django (1.2.3-1) UNRELEASED; urgency=low
   * Drop "--with quilt" and quilt build-dependency since the package is
     already using source format "3.0 (quilt)".
 
- -- Krzysztof Klimonda <kklimonda@syntaxhighlighted.com>  Sun, 12 Sep 2010 18:10:01 +0200
+ -- Raphaël Hertzog <hertzog@debian.org>  Sat, 18 Sep 2010 19:37:03 +0200
 
 python-django (1.2.1-1) unstable; urgency=low
 
