@@ -42,9 +42,6 @@ override_dh_install:
 	# Move scripts to /usr/lib/python-django
 	mkdir -p $(PREFIX)/usr/lib/python-django
 	mv $(DJANGO_DIR)/bin $(PREFIX)/usr/lib/python-django
-
-	# Move conf template to shared directory
-	#mv $(DJANGO_DIR)/conf $(PREFIX)/usr/lib/python-django
 	
 	# Fix permissions
 	chmod 644 $(PREFIX)/etc/bash_completion.d/django_bash_completion
