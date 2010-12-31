@@ -1,3 +1,10 @@
+python-django (1.2.4-1) unstable; urgency=high
+
+  * New upstream release with security fixes only.
+    http://www.djangoproject.com/weblog/2010/dec/22/security/
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Fri, 31 Dec 2010 11:40:28 +0100
+
 python-django (1.2.3-2) unstable; urgency=low
 
   * Team upload.
