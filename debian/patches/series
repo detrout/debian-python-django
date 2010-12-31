@@ -1,6 +1,3 @@
-01_disable_url_verify_regression_tests.diff
 03_manpage.diff
 04_hyphen-manpage.diff
-05_fix_regression_tests.diff
-06_fix_regression_tests.diff
 07_disable_url_verify_model_tests.diff
