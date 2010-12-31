@@ -5,8 +5,8 @@ python-django (1.2.4-1) unstable; urgency=high
   * Drop patches merged upstream:
     - debian/patches/05_fix_regression_tests.diff
     - debian/patches/06_fix_regression_tests.diff
-  * Drop debian/patches/01_disable_url_verify_regression_tests.diff as it's no
-    longer needed (the failing test has been removed upstream).
+  * Update 01_disable_url_verify_regression_tests.diff to cope with the
+    updated regressions tests.
   * Update 03_manpage.diff and 04_hyphen-manpage.diff to cope with changes in
     the manual page.
 
