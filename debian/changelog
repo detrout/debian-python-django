@@ -1,3 +1,10 @@
+python-django (1.2.4-2) UNRELEASED; urgency=low
+
+  * Do not compress objects.inv used by Sphinx generated documentation.
+    Thanks to Michael Fladischer for the report. Closes: #608769 
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 03 Jan 2011 12:30:11 +0100
+
 python-django (1.2.4-1) unstable; urgency=high
 
   * New bugfix-only upstream release. It includes security fixes.
