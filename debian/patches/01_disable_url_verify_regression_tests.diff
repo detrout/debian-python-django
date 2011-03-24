@@ -35,3 +35,43 @@ Comment:
      def test_urlfield_5(self):
          f = URLField(min_length=15, max_length=20)
          self.assertRaisesErrorWithMessage(ValidationError, "[u'Ensure this value has at least 15 characters (it has 13).']", f.clean, 'http://f.com')
+@@ -625,18 +604,6 @@
+         except ValidationError, e:
+             self.assertEqual("[u'This URL appears to be a broken link.']", str(e))
+ 
+-    def test_urlfield_10(self):
+-        # UTF-8 char in path, enclosed by a monkey-patch to make sure
+-        # the encoding is passed to urllib2.urlopen
+-        f = URLField(verify_exists=True)
+-        try:
+-            _orig_urlopen = urllib2.urlopen
+-            urllib2.urlopen = lambda req: True
+-            url = u'http://t\xfcr.djangoproject.com/'
+-            self.assertEqual(url, f.clean(url))
+-        finally:
+-            urllib2.urlopen = _orig_urlopen
+-
+     # BooleanField ################################################################
+ 
+     def test_booleanfield_1(self):
+
+--- a/tests/regressiontests/forms/tests/error_messages.py
++++ b/tests/regressiontests/forms/tests/error_messages.py
+@@ -139,17 +139,6 @@
+         self.assertFormErrors([u'EMPTY FILE'], f.clean, SimpleUploadedFile('name', None))
+         self.assertFormErrors([u'EMPTY FILE'], f.clean, SimpleUploadedFile('name', ''))
+ 
+-    def test_urlfield(self):
+-        e = {
+-            'required': 'REQUIRED',
+-            'invalid': 'INVALID',
+-            'invalid_link': 'INVALID LINK',
+-        }
+-        f = URLField(verify_exists=True, error_messages=e)
+-        self.assertFormErrors([u'REQUIRED'], f.clean, '')
+-        self.assertFormErrors([u'INVALID'], f.clean, 'abc.c')
+-        self.assertFormErrors([u'INVALID LINK'], f.clean, 'http://www.broken.djangoproject.com')
+-
+     def test_booleanfield(self):
+         e = {
+             'required': 'REQUIRED',
