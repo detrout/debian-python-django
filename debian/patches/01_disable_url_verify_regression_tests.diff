@@ -7,7 +7,7 @@ Comment:
 
 --- a/tests/regressiontests/forms/tests/fields.py
 +++ b/tests/regressiontests/forms/tests/fields.py
-@@ -515,33 +515,6 @@ class FieldsTests(TestCase):
+@@ -557,27 +557,6 @@
          self.assertRaisesErrorWithMessage(ValidationError, "[u'Enter a valid URL.']", f.clean, 'http://example.')
          self.assertRaisesErrorWithMessage(ValidationError, "[u'Enter a valid URL.']", f.clean, 'http://.com')
  
@@ -16,6 +16,7 @@ Comment:
 -        self.assertEqual(u'http://www.google.com/', f.clean('http://www.google.com')) # This will fail if there's no Internet connection
 -        self.assertRaisesErrorWithMessage(ValidationError, "[u'Enter a valid URL.']", f.clean, 'http://example')
 -        self.assertRaises(ValidationError, f.clean, 'http://www.broken.djangoproject.com') # bad domain
+-        self.assertRaises(ValidationError, f.clean, 'http://qa-dev.w3.org/link-testsuite/http.php?code=405') # Method not allowed
 -        try:
 -            f.clean('http://www.broken.djangoproject.com') # bad domain
 -        except ValidationError, e:
@@ -23,13 +24,6 @@ Comment:
 -        self.assertRaises(ValidationError, f.clean, 'http://google.com/we-love-microsoft.html') # good domain, bad page
 -        try:
 -            f.clean('http://google.com/we-love-microsoft.html') # good domain, bad page
--        except ValidationError, e:
--            self.assertEqual("[u'This URL appears to be a broken link.']", str(e))
--        # Valid and existent IDN
--        self.assertEqual(u'http://\u05e2\u05d1\u05e8\u05d9\u05ea.idn.icann.org/', f.clean(u'http://עברית.idn.icann.org/'))
--        # Valid but non-existent IDN
--        try:
--            f.clean(u'http://broken.עברית.idn.icann.org/')
 -        except ValidationError, e:
 -            self.assertEqual("[u'This URL appears to be a broken link.']", str(e))
 -
