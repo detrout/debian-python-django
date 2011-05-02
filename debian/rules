@@ -42,7 +42,7 @@ override_dh_install:
 	dh_install
 	
 	# Use default shebang and m move scripts to /usr/lib/python-django
-	for ver in $(shell pyversions -vr); do \
+	set -e; for ver in $(shell pyversions -vr); do \
 		FILE=$(PREFIX)/$(call py_libdir_sh,$$ver)/django/conf/project_template/manage.py; \
 		if [ -f $$FILE ]; then\
 			perl -pi -e 's|^#!/usr/bin/env python.*|#!/usr/bin/python|' $$FILE;\
@@ -63,7 +63,7 @@ override_dh_install:
 	mv $(PREFIX)/usr/bin/django-admin.py $(PREFIX)/usr/bin/django-admin
 	
 	# Remove embedded Javascript libraries
-	for FILENAME in jquery.js jquery.min.js; do \
+	set -e; for FILENAME in jquery.js jquery.min.js; do \
 		find $(PREFIX) -name $$FILENAME -exec \
 			ln -sf /usr/share/javascript/jquery/$$FILENAME {} \;; \
 	done
