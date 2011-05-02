@@ -43,6 +43,7 @@ override_dh_install:
 	
 	# Use default shebang and m move scripts to /usr/lib/python-django
 	set -e; for ver in $(shell pyversions -vr); do \
+		[ -f /usr/bix/python$$ver ] || continue;\
 		FILE=$(PREFIX)/$(call py_libdir_sh,$$ver)/django/conf/project_template/manage.py; \
 		if [ -f $$FILE ]; then\
 			perl -pi -e 's|^#!/usr/bin/env python.*|#!/usr/bin/python|' $$FILE;\
