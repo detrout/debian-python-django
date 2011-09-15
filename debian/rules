@@ -17,6 +17,7 @@ PREFIX = debian/python-django
 override_dh_auto_clean:
 	rm -rf docs.debian tests/__init__.py
 	find -name "*.DS_Store" -delete
+	chmod a-x django/contrib/gis/tests/data/texas.dbf
 	dh_auto_clean
 
 override_dh_auto_build:
