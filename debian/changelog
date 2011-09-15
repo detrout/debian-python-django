@@ -9,6 +9,10 @@ python-django (1.3.1-1) UNRELEASED; urgency=low
   * Apply patch from Steve Langasek to dynamically build the UTF-8
     locale required by the test-suite instead of build-depending on
     locales-all. Closes: #630421
+  * Use "dh --with sphinxdoc" to clean up the Sphinx generated documentation
+    and avoid the embedded-javascript-library lintian warning. Build-Depends
+    on python-sphinx >= 1.0.7+dfsg-1 for this and also add
+    ${sphinxdoc:Depends} to python-django-doc Depends field.
 
  -- Raphaël Hertzog <hertzog@debian.org>  Thu, 15 Sep 2011 09:37:26 +0200
 

@@ -12,7 +12,7 @@ endif
 PREFIX = debian/python-django
 
 %:
-	dh $@
+	dh $@ --with sphinxdoc
 
 override_dh_auto_clean:
 	rm -rf docs.debian tests/__init__.py
