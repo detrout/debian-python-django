@@ -6,6 +6,9 @@ python-django (1.3.1-1) UNRELEASED; urgency=low
   * Update 01_disable_url_verify_regression_tests.diff and merge
     07_disable_url_verify_model_tests.diff into it.
   * Update patch headers to conform to DEP-3.
+  * Apply patch from Steve Langasek to dynamically build the UTF-8
+    locale required by the test-suite instead of build-depending on
+    locales-all. Closes: #630421
 
  -- Raphaël Hertzog <hertzog@debian.org>  Thu, 15 Sep 2011 09:37:26 +0200
 

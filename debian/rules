@@ -32,7 +32,10 @@ override_dh_auto_build:
 
 override_dh_auto_test:
 	touch tests/__init__.py
-	LC_ALL=en_US.utf8 PYTHONPATH=. tests/runtests.py --settings=tests.test_sqlite --verbosity=2
+	mkdir -p tmp-locales
+	localedef -i /usr/share/i18n/locales/en_US -c -f UTF-8 -A /usr/share/locale/locale.alias tmp-locales/en_US.UTF-8
+	LOCPATH=$(CURDIR)/tmp-locales LC_ALL=en_US.UTF-8 PYTHONPATH=. tests/runtests.py --settings=tests.test_sqlite --verbosity=2
+	rm -rf tmp-locales
 
 override_dh_clean:
 	# backup~ is used in tests
