@@ -2,3 +2,4 @@
 02_disable-sources-in-sphinxdoc.diff
 03_manpage.diff
 04_hyphen-manpage.diff
+05_fix_djangodocs_sphinx_ext.diff
