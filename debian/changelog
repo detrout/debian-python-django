@@ -12,6 +12,8 @@ python-django (1.4-1) UNRELEASED; urgency=low
     renamed file.
   * Drop 07_fix_for_sphinx1.1.2.diff merged upstream.
   * Drop 08_fix_test_week_view_allow_future.diff, merged upstream.
+  * Add 01_disable_broken_test.diff to disable a test that fails with
+    the current python 2.7 version in Debian.
 
  -- Raphaël Hertzog <hertzog@debian.org>  Sat, 31 Mar 2012 10:14:40 +0200
 
