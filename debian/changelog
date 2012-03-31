@@ -1,7 +1,17 @@
 python-django (1.4-1) UNRELEASED; urgency=low
 
-  * New upstream release.
+  * New upstream release. Closes: #666003
   * Fix watch file to correctly extract the version number from the URL.
+  * Updated Standards-Version to 3.9.3 (no change needed).
+  * Drop 01_disable_url_verify_regression_tests.diff since upstream test
+    suite has been modified to work even without internet connection.
+  * Update 04_hyphen-manpage.diff to apply again.
+  * Drop 05_fix_djangodocs_sphinx_ext.diff which has been merged
+    upstream.
+  * Update 06_use_debian_geoip_database_as_default.diff to apply on
+    renamed file.
+  * Drop 07_fix_for_sphinx1.1.2.diff merged upstream.
+  * Drop 08_fix_test_week_view_allow_future.diff, merged upstream.
 
  -- Raphaël Hertzog <hertzog@debian.org>  Sat, 31 Mar 2012 10:14:40 +0200
 
