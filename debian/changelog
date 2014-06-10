@@ -2,6 +2,7 @@ python-django (1.7b3-0) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Add new build-dep: python-setup
+  * Refresh patches
 
  -- Diane Trout <diane@ghic.org>  Thu, 08 May 2014 14:52:09 -0700
 

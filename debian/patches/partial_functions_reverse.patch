@@ -13,7 +13,7 @@ is provided as an argument to a url pattern.
 
 --- a/django/core/urlresolvers.py
 +++ b/django/core/urlresolvers.py
-@@ -11,6 +11,8 @@
+@@ -13,6 +13,8 @@
  import re
  from threading import local
  
@@ -22,29 +22,10 @@ is provided as an argument to a url pattern.
  from django.http import Http404
  from django.core.exceptions import ImproperlyConfigured, ViewDoesNotExist
  from django.utils.datastructures import MultiValueDict
-@@ -268,6 +270,9 @@
-                 self._callback_strs.add(pattern._callback_str)
-             elif hasattr(pattern, '_callback'):
-                 callback = pattern._callback
-+                if isinstance(callback, functools.partial):
-+                    callback = callback.func
-+
-                 if not hasattr(callback, '__name__'):
-                     lookup_str = callback.__module__ + "." + callback.__class__.__name__
-                 else:
 --- a/tests/urlpatterns_reverse/urls.py
 +++ b/tests/urlpatterns_reverse/urls.py
-@@ -2,7 +2,7 @@
- 
- from django.conf.urls import patterns, url, include
- 
--from .views import empty_view, absolute_kwargs_view
-+from .views import empty_view, empty_view_partial, empty_view_wrapped, absolute_kwargs_view
- 
- 
- other_patterns = patterns('',
-@@ -53,6 +53,10 @@
-             include('urlpatterns_reverse.included_urls')),
+@@ -48,6 +48,10 @@
+     url(r'^outer-no-kwargs/(\d+)/', include('urlpatterns_reverse.included_no_kwargs_urls')),
      url('', include('urlpatterns_reverse.extra_urls')),
  
 +    # Partials should be fine.
@@ -54,23 +35,3 @@ is provided as an argument to a url pattern.
      # This is non-reversible, but we shouldn't blow up when parsing it.
      url(r'^(?:foo|bar)(\w+)/$', empty_view, name="disjunction"),
  
---- a/tests/urlpatterns_reverse/views.py
-+++ b/tests/urlpatterns_reverse/views.py
-@@ -1,3 +1,5 @@
-+from functools import partial, update_wrapper
-+
- from django.http import HttpResponse
- from django.views.generic import RedirectView
- from django.core.urlresolvers import reverse_lazy
-@@ -45,3 +47,11 @@
- 
- def bad_view(request, *args, **kwargs):
-     raise ValueError("I don't think I'm getting good value for this view")
-+
-+
-+empty_view_partial = partial(empty_view, template_name="template.html")
-+
-+
-+empty_view_wrapped = update_wrapper(
-+    partial(empty_view, template_name="template.html"), empty_view,
-+)
